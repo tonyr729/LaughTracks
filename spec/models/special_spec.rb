@@ -5,6 +5,11 @@ RSpec.describe Special do
         special = Special.create
         expect(special).to_not be_valid
       end
+
+      it "has one Comedian" do
+        association = described_class.reflect_on_association(:comedian)
+        expect(association.macro).to eq :belongs_to
+      end
     end
   end
 end

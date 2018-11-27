@@ -30,9 +30,9 @@ Comedian.create!(
       city: "Chicago, Illinois",
     },
     {
-      name: "Rory Scovel",
-      age: 38,
-      city: "Greenville, South Carolina",
+      name: "David Cross",
+      age: 54,
+      city: "Roswell, Georgia",
     },
     {
       name: "Zach Galifianakis",
@@ -60,9 +60,9 @@ Comedian.create!(
       city: "Shrewsbury, Massachusetts",
     },
     {
-      name: "Eugene Mirman",
-      age: 44,
-      city: "Moscow, Russia"
+      name: "Jerry Seinfeld",
+      age: 64,
+      city: "Brooklyn, New York"
     },
   ]
 )

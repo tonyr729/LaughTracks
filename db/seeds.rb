@@ -7,14 +7,64 @@ Comedian.create!(
     {
       name: "Dave Chappelle",
       age: 45,
-      city: "New York City, NY",
+      city: "Washington, DC",
     },
     {
       name: "Louis CK",
       age: 51,
-      city: "New York City, NY",
+      city: "Washington, DC",
+    },
+    {
+      name: "Bill Bur",
+      age: 50,
+      city: "Canton, Massachusett",
+    },
+    {
+      name: "Pete Holmes",
+      age: 39,
+      city: "Lexington, Massachusetts",
+    },
+    {
+      name: "Hannibal Buress",
+      age: 35,
+      city: "Chicago, Illinois",
+    },
+    {
+      name: "Rory Scovel",
+      age: 38,
+      city: "Greenville, South Carolina",
+    },
+    {
+      name: "Zach Galifianakis",
+      age: 49,
+      city: "Wilkesboro, North Carolina",
+    },
+    {
+      name: "John Mulaney",
+      age: 36,
+      city: "Chicago, Illinois",
+    },
+    {
+      name: "Anthony Jeselnik",
+      age: 39,
+      city: "Pittsburgh, Pennsylvania",
+    },
+    {
+      name: "Aziz Ansari",
+      age: 35,
+      city: "Columbia, South Carolina",
+    },
+    {
+      name: "Mike Birbiglia",
+      age: 40,
+      city: "Shrewsbury, Massachusetts",
+    },
+    {
+      name: "Eugene Mirman",
+      age: 44,
+      city: "Moscow, Russia"
     },
   ]
 )
 
-p "Created #{Comedian.count} movies"
+p "Created #{Comedian.count} comedians"

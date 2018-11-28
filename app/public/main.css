@@ -1,0 +1,62 @@
+.carousel {
+  position: absolute;
+  left: 20%;
+  top: 15%;
+  background: #222;
+  width: 65%;
+  height: 70%;
+  overflow: hidden;
+  -webkit-box-shadow: -9px 11px 15px 0px #2525258a;
+  -moz-box-shadow: -9px 11px 15px 0px #2525258a;
+  box-shadow: -9px 11px 15px 0px #2525258a;
+}
+
+.carousel-control-next, 
+.carousel-control-prev {
+  top: 0rem;
+}
+
+.title {
+  z-index: 1;
+  position: absolute;
+  margin: 35px auto;
+  top: 0;
+  left: 18%;
+  font-size: 6rem;
+}
+
+.profile-container {
+  position: relative;
+}
+
+.profile-pic {
+  opacity: .4;
+}
+
+.fade-overlay {
+  color: #f1f1f1;
+  z-index: 1;
+  position: absolute;
+  height: 100%
+}
+
+.comic-name {
+  z-index: 2;
+  position: absolute;
+  margin: 35px auto;
+  top: 0;
+  left: 4%;
+  font-size: 6rem;
+  color: #fff;
+}
+
+.comic-info {
+  z-index: 2;
+  position: absolute;
+  top: 9rem;
+  left: 4.5%;
+  color: #fff;
+}
+
+
+

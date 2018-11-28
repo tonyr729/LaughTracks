@@ -9,61 +9,73 @@ Comedian.create!(
       name: "Dave Chappelle",
       age: 45,
       city: "Washington, DC",
+      img: "https://s3.amazonaws.com/laugh-track-comedians/dave-crop.jpg"
     },
     {
       name: "Louis CK",
       age: 51,
       city: "Washington, DC",
+      img: "https://s3.amazonaws.com/laugh-track-comedians/louis-crop.jpg"
     },
     {
       name: "Bill Bur",
       age: 50,
       city: "Canton, Massachusett",
+      img: "https://s3.amazonaws.com/laugh-track-comedians/bill-crop.jpg"
     },
     {
       name: "Pete Holmes",
       age: 39,
       city: "Lexington, Massachusetts",
+      img: "https://s3.amazonaws.com/laugh-track-comedians/pete-crop.jpg"
     },
     {
       name: "Hannibal Buress",
       age: 35,
       city: "Chicago, Illinois",
+      img: "https://s3.amazonaws.com/laugh-track-comedians/hannibal-crop.jpg"
     },
     {
       name: "David Cross",
       age: 54,
       city: "Roswell, Georgia",
+      img: "https://s3.amazonaws.com/laugh-track-comedians/david-crop.jpg"
     },
     {
       name: "Zach Galifianakis",
       age: 49,
       city: "Wilkesboro, North Carolina",
+      img: "https://s3.amazonaws.com/laugh-track-comedians/zach-crop.jpg"
     },
     {
       name: "John Mulaney",
       age: 36,
       city: "Chicago, Illinois",
+      img: "https://s3.amazonaws.com/laugh-track-comedians/john-crop.jpg"
     },
     {
       name: "Anthony Jeselnik",
       age: 39,
       city: "Pittsburgh, Pennsylvania",
+      img: "https://s3.amazonaws.com/laugh-track-comedians/anthony-crop.jpg"
     },
     {
       name: "Aziz Ansari",
       age: 35,
       city: "Columbia, South Carolina",
+      img: "https://s3.amazonaws.com/laugh-track-comedians/aziz-crop.jpg"
     },
     {
       name: "Mike Birbiglia",
       age: 40,
       city: "Shrewsbury, Massachusetts",
+      img: "https://s3.amazonaws.com/laugh-track-comedians/mike-crop.jpg"
     },
     {
       name: "Jerry Seinfeld",
       age: 64,
-      city: "Brooklyn, New York"
+      city: "Brooklyn, New York",
+      img: "https://s3.amazonaws.com/laugh-track-comedians/jerry-crop.jpg"
     },
   ]
 )

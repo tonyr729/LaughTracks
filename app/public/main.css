@@ -58,6 +58,23 @@
   color: #fff;
 }
 
+/* Specials Container */
+.specials-container {
+  position: absolute;
+  display: flex;
+  z-index: 2;
+  top: 17rem;
+  left: 30rem;
+  overflow: scroll;
+}
+
+.special-container-single {
+  width: 25%;
+}
+.special-container-single img {
+  width: 100%;
+}
+
 
 /* Background Gradient */
 

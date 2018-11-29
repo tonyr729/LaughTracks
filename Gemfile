@@ -8,6 +8,7 @@ gem 'sinatra-activerecord'
 group :development, :test do
   gem 'capybara', '~> 3.0.3'
   gem 'database_cleaner'
+  gem 'simplecov'
   gem 'launchy'
   gem 'pry'
   gem 'rack-test'

@@ -8,6 +8,15 @@
       <div class="carousel-item">
         <h2 class="comic-name"><%= comic.name %></h2>
         <p class="comic-info"><%= comic.age %> - <%= comic.city %></p>
+        <h3 class="specials-title">Specials</h3>
+        <div class="specials-container">
+          <% comic.specials.each do |special| %>
+            <div class="special-container-single">
+              <%= special.name %>
+              <img src=<%= special.image_url %> alt="">
+            </div>
+          <% end %>
+        </div>
         <div class="profile-container">
           <img class="d-block w-50 fade-overlay" src="/fade.png" alt="fade styling">
           <img class="d-block w-50 profile-pic" src="<%= comic.img %>" >

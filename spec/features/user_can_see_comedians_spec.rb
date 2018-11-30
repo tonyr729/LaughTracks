@@ -1,28 +1,42 @@
 RSpec.describe 'As a visitor' do
-  before(:each) do
-    @comedian = Comedian.create(name: "Tony", age: 30, city: "Tahoe")
-  end
-
-  it 'allows user to see carousel' do
-    visit '/comedians'
-    expect(page).to have_content("- Laugh Tracks -")
-  end
-
-  it 'allows user to see comedians' do
-    visit '/comedians'
-
-    within("#carousel_#{@comedian.id}") do
-      expect(page).to have_content(@comedian.name)
+  describe "when I go to comedians page" do
+    before(:each) do
+      @comedian = Comedian.create(name: "Tony", age: 30, city: "Tahoe")
+      @special = @comedian.specials.create(name: "Holy @#$% I'm funny", image_url: "me_being_funny.jpg", run_time: 75)
+    end
   
-      within("#info_#{@comedian.id}") do
-        expect(page).to have_content(@comedian.age)
-        expect(page).to have_content(@comedian.city)
+    it 'displays a carousel' do
+      visit '/comedians'
+      expect(page).to have_content("- Laugh Tracks -")
+    end
+  
+    it 'displays comedians' do
+      visit '/comedians'
+  
+      within("#carousel_#{@comedian.id}") do
+        expect(page).to have_content(@comedian.name)
+    
+        within("#info_#{@comedian.id}") do
+          expect(page).to have_content(@comedian.age)
+          expect(page).to have_content(@comedian.city)
+        end
+      end
+  
+      within("#img_#{@comedian.id}") do
+        expect(page).to have_content(@comedian.img)
       end
     end
-
-    within("#img_#{@comedian.id}") do
-      expect(page).to have_content(@comedian.img)
+  
+  
+    it 'displays each comedians specials' do
+      visit '/comedians'
+      
+      within(".specials-container") do
+        within("#special_#{@special.id}") do
+          expect(page).to have_content(@special.name)
+          expect(page).to have_css("img[src*='#{@special.image_url}']")
+        end
+      end
     end
   end
-
 end

@@ -10,12 +10,18 @@
         <p class="comic-info" id="info_<%= comic.id %>">
           <%= comic.age %> - <%= comic.city %>
         </p>
-        <h3 class="specials-title">Specials</h3>
+        <h3 class="specials-main-title">Specials</h3>
         <div class="specials-container">
           <% comic.specials.each do |special| %>
-            <div class="special-container-single" id="special_<%= comic.id %>">
-              <%= special.name %>
-              <img src=<%= special.image_url %> alt="">
+            <div class="special-container-single" id="special_<%= special.id %>">
+              <img src=<%= special.image_url %>>
+              <div class="overlay">
+                <div class="special-title">
+                  <p><%= special.name %></p>
+                  <p>--</p> 
+                  <p> Runtime: <%= special.run_time.to_i %>m</p>
+                </div>
+              </div>
             </div>
           <% end %>
         </div>

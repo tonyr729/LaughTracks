@@ -23,5 +23,23 @@ RSpec.describe Comedian do
         expect(association.macro).to eq :has_many
       end
     end
+
+    describe 'Class Methods' do
+      before(:each) do
+        Comedian.create(name: "Dave Chappelle", age: 45, city: "Washington, DC", img: "https://s3.amazonaws.com/laugh-track-comedians/dave-crop.jpg")
+        Comedian.create(name: "Louis CK", age: 51, city: "Washington, DC", img: "https://s3.amazonaws.com/laugh-track-comedians/louis-crop.jpg")
+        Comedian.create(name: "Bill Bur", age: 50, city: "Canton, Massachusett", img: "https://s3.amazonaws.com/laugh-track-comedians/bill-crop.jpg")
+      end
+
+      it 'should return the average age of all comedians' do
+        expect(Comedian.average_age).to eq 48
+      end
+
+      it 'should return unique cities for all comedians' do
+        actual = ["Washington, DC", "Canton, Massachusett"]
+
+        expect(Comedian.unique_cities).to eq actual
+      end
+    end
   end
 end

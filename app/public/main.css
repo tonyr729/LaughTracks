@@ -1,10 +1,11 @@
 .carousel {
   position: absolute;
-  left: 20%;
-  top: 15%;
+  left: 50%;
+  margin-left: -575px;
+  top: 18%;
   background: #222;
-  width: 65%;
-  height: 70%;
+  width: 1150px;
+  height: 67%;
   overflow: hidden;
   -webkit-box-shadow: -9px 11px 15px 0px #2525258a;
   -moz-box-shadow: -9px 11px 15px 0px #2525258a;
@@ -13,7 +14,7 @@
 
 .carousel-control-next, 
 .carousel-control-prev {
-  top: 0rem;
+  width: 55px;
 }
 
 .title {
@@ -68,11 +69,54 @@
   overflow: scroll;
 }
 
+.specials-main-title {
+  position: absolute;
+  left: 30rem;
+  top: 14.5rem;
+  z-index: 2;
+}
+
 .special-container-single {
+  position: relative;
   width: 25%;
+  height: 240px;
+  overflow: hidden;
+  margin-right: 2rem;
 }
 .special-container-single img {
+  display: block;
   width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #222222;
+}
+
+.special-container-single:hover .overlay {
+  opacity: .9;
+}
+
+.special-title {
+  color: white;
+  font-size: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 

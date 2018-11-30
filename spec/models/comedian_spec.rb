@@ -2,15 +2,19 @@ RSpec.describe Comedian do
   describe 'Validations' do
     describe 'Required Field(s)' do
       it 'should be invalid if missing a name' do
-        comic = Comedian.create(age: 48)
+        comic = Comedian.create(age: 48, img: "url")
         expect(comic).to_not be_valid
       end
 
       it 'should be invalid if missing an age' do
-        comic = Comedian.create(name: 'Mitch Hedberg')
+        comic = Comedian.create(name: 'Mitch Hedberg', img: "url")
         expect(comic).to_not be_valid
       end
 
+      it 'should be invalid if missing an img url' do
+        comic = Comedian.create(name: 'Mitch Hedberg', age: 48)
+        expect(comic).to_not be_valid
+      end
     end
     
     describe 'Relations' do
@@ -18,7 +22,6 @@ RSpec.describe Comedian do
         association = Comedian.reflect_on_association(:specials)
         expect(association.macro).to eq :has_many
       end
-
     end
   end
 end

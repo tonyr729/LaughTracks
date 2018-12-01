@@ -2,8 +2,9 @@
 
 .stats-title {
   display: inline;
-  font-size:40px;
+  font-size:32px;
   font-weight:bold;
+  vertical-align: 14px;
   color:#191919;
   -webkit-font-smoothing: antialiased;
 }
@@ -11,6 +12,7 @@
 .stats-info {
   display: inline;
   font-weight: normal;
+  vertical-align: -2px;
   font-size: 35px;
   color: #888;
   padding:5px 0;
@@ -19,7 +21,6 @@
 marquee {
   width: 500px;
   font-size: 33px;
-  vertical-align: -10px;
   color: #888;
 }
 
@@ -68,7 +69,7 @@ box-sizing: border-box;
   transition: all 500ms ease;
   right: -24px;
   z-index: 1000;
-  top: 0;
+  top: 3px;
 }
 
 #toggle + label:after {

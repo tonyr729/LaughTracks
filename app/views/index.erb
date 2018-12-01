@@ -3,7 +3,8 @@
 
 <div class="stats">
   <h1 class="stats-title">Average age: <span class="stats-info"><%= @comedians.average_age %> </span></h1>
-  <h1 class="stats-title">Average specials run time: <span class="stats-info"><%= @specials.average_runtime.to_f %></span></h1>
+  <h1 class="stats-title">Total Specials: <span class="stats-info"><%= @specials.all.count %> </span></h1>
+  <h1 class="stats-title">Average Specials Runtime: <span class="stats-info"><%= @specials.average_runtime.round(2) %></span></h1>
   <h1 class="stats-title">Birthplaces:</h1>
   <marquee 
     behavior="scroll" 
@@ -11,7 +12,7 @@
     onmouseover="this.stop();" 
     onmouseout="this.start();">
     <% @comedians.unique_cities.each do |city| %>
-      <%= city %>,
+      <%= city %>;
     <% end %>
   </marquee> 
 </div>
@@ -29,7 +30,7 @@
         <p class="comic-info" id="info_<%= comic.id %>">
           <%= comic.age %> - <%= comic.city %>
         </p>
-        <h3 class="specials-main-title">Specials</h3>
+        <h3 class="specials-main-title">Specials (<%= comic.specials.count %>)</h3>
         <div class="specials-container">
           <% comic.specials.each do |special| %>
             <div class="special-container-single" id="special_<%= special.id %>">

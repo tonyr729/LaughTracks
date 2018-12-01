@@ -20,20 +20,35 @@ RSpec.describe "As a visitor" do
       visit '/comedians?age=50'
 
       within(".carousel-inner") do
-        expect(page).to have_css(".carousel-item", :count => 2)
+        expect(page).to have_css(".carousel-item", :count => 3)
       end
+
+      expect(page).to have_css("#carousel_#{@louis.id}")
+      expect(page).to have_css("#carousel_#{@bill.id}")
+      expect(page).to_not have_css("#carousel_#{@dave.id}")
+
     end
 
-    xit "should display specials" do
+    it "should display specials" do
 
       visit '/comedians?age=50'
 
+      expect(page).to have_css("#special_#{@louis_special_1.id}")
+      expect(page).to have_css("#special_#{@louis_special_2.id}")
+      expect(page).to have_css("#special_#{@bill_special_1.id}")
+      expect(page).to have_css("#special_#{@bill_special_2.id}")
+      expect(page).to_not have_css("#special_#{@dave_special_1.id}")
+      expect(page).to_not have_css("#special_#{@dave_special_2.id}")
     end
 
-    xit "should display stats on comedians" do
+    it "should display stats on comedians" do
 
       visit '/comedians?age=50'
-      
+
+      within(".stats") do
+        expect(page).to have_content("Average age: 50")
+        expect(page).to have_content("Average specials run time: 67.66")
+      end
     end
   end
 end

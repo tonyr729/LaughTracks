@@ -24,4 +24,15 @@ RSpec.describe Special do
       expect(association.macro).to eq :belongs_to
     end
   end
+
+  describe 'Class Methods' do
+    it 'can average run time' do
+      dave = Comedian.create(name: "Dave Chappelle", age: 45, city: "Washington, DC", img: "https://s3.amazonaws.com/laugh-track-comedians/dave-crop.jpg")
+      dave.specials.create(name: "Dave Chappelle: First", image_url: "https://m.media-amazon.com/images/M/MV5BODJkMTAxNmYtZDg4OS00NzA2LTlmZTUtMDc2MjIwMzE4ZDMxXkEyXkFqcGdeQXVyMTk3NDAwMzI@._V1_.jpg", run_time: 60)
+      dave.specials.create(name: "Dave Chappelle: Second", image_url: "https://m.media-amazon.com/images/M/MV5BODJkMTAxNmYtZDg4OS00NzA2LTlmZTUtMDc2MjIwMzE4ZDMxXkEyXkFqcGdeQXVyMTk3NDAwMzI@._V1_.jpg", run_time: 74)
+      dave.specials.create(name: "Dave Chappelle: Third", image_url: "https://m.media-amazon.com/images/M/MV5BODJkMTAxNmYtZDg4OS00NzA2LTlmZTUtMDc2MjIwMzE4ZDMxXkEyXkFqcGdeQXVyMTk3NDAwMzI@._V1_.jpg", run_time: 65)
+      
+      expect(Special.average_runtime.to_f.round(2)).to eq 66.33
+    end
+  end
 end

@@ -2,8 +2,9 @@
 
 .stats-title {
   display: inline;
-  font-size:40px;
+  font-size:32px;
   font-weight:bold;
+  vertical-align: 14px;
   color:#191919;
   -webkit-font-smoothing: antialiased;
 }
@@ -11,6 +12,7 @@
 .stats-info {
   display: inline;
   font-weight: normal;
+  vertical-align: -2px;
   font-size: 35px;
   color: #888;
   padding:5px 0;
@@ -19,11 +21,10 @@
 marquee {
   width: 500px;
   font-size: 33px;
-  vertical-align: -10px;
   color: #888;
 }
 
-.message {
+.stats {
 background:#181818;
 color:#FFF;
 position: absolute;
@@ -38,7 +39,7 @@ box-sizing: border-box;
   
 }
 
-.message h1 {
+.stats h1 {
   color:#FFF;
 }
 
@@ -68,7 +69,7 @@ box-sizing: border-box;
   transition: all 500ms ease;
   right: -24px;
   z-index: 1000;
-  top: 0;
+  top: 3px;
 }
 
 #toggle + label:after {
@@ -80,7 +81,7 @@ transition: margin 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
   padding:5em 3em;
 }
 
-#toggle:checked ~ .message {
+#toggle:checked ~ .stats {
   top: 0;
 }
 

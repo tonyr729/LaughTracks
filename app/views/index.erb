@@ -7,11 +7,15 @@
   <h1 class="stats-title">Average specials run time: </h1>
   <h2 class="stats-info"><%= @specials.average_runtime %> </h2>
   <h1 class="stats-title">Birthplaces:</h1>
-  <marquee behavior="scroll" direction="left">
+  <marquee 
+    behavior="scroll" 
+    direction="left" 
+    onmouseover="this.stop();" 
+    onmouseout="this.start();">
     <% @comedians.unique_cities.each do |city| %>
       <%= city %>,
     <% end %>
-  </marquee>
+  </marquee> 
 </div>
 
 
